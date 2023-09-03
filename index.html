@@ -10,92 +10,104 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./static/style.css">
     <title>Jae Hyuk Choi</title>
 </head>
-<style>
-    *{
-        font-family: 'Roboto', sans-serif;
-    }
-</style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/7de04482d7.js" crossorigin="anonymous"></script>
+<script src="./static/main.js"></script>
+
+
 <body>
-    <div class="row container-fluid bg-light">
-        <div class="col-4">
-            <div class="col bg-warning bg-gradient">
-                <div class="row align-items-center">
-                    <div class="col"><img src="./data/profile.jpeg" class="rounded-circle img-thumbnail" alt="profile"></div>
-                    <div class="col"><h2>Jae Hyuk Choi</h2></div>
-                    
-                    
-                </div>
-                
-            </div>
-            <div class="col">
-                <ul>
-                    <li>Education
-                        <ul>
-                            <li><strong>Ajou University</strong>, Suwon, Korea
-                                <ul>
-                                    <li>B.S. in Military Digital Convergence (2015. 3. ~ 2019. 2.)</li>
-                                    <li>M.S./Ph.D. in Military Digital Convergence (2021. 3. ~ )</li>
-        
-                                </ul>
-                            </li>
-                        </ul>
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container-fluid">
+            <span class="navbar-brand">Jae Hyuk Choi</span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="javascript:void(0)" onclick="loadMenu(this)"
+                            data-menu="home">Home</a>
                     </li>
-                    <li>Working Experiences
-                        <ul>
-                            <li>Republic of Korea Air Force Officer
-                                <ul>
-                                    <li>Logistics Command(2019. 12. ~ 2021. 12.)</li>
-                                    <li>Cyber Operation Center(2022. 1. ~ 2023. 7.)</li>
-                                    <li>DSA(2023. 8. ~ )</li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="loadMenu(this)"
+                            data-menu="projects">Projects</a>
                     </li>
-                    <li>Publications
-                        <ul>
-                            <li>최재혁, 백호기, 임재성, "도심환경 FANET 라우팅을 위한 신속한 링크 단절상태 인지", 한국군사과학기술학회, pp.1641~1642, 2018.</li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="loadMenu(this)"
+                            data-menu="publications">Publications</a>
                     </li>
-                    <li>Projects
-                        <ul>
-                            <li><a href="http://untalented-yacht-club.ml" target="_blank">NFT</a></li>
-                        </ul>
-                    </li>
-                    <li>Skills
-                        <ul>
-                            <li>C, C++</li>
-                            <li>Java, Spring, JSP</li>
-                            <li>Python, Flask, Tensorflow</li>
-                            <li>Nodejs, React</li>
-                            <li>Solidity</li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0)" onclick="loadMenu(this)"
+                            data-menu="study">Study</a>
                     </li>
                 </ul>
+
             </div>
         </div>
-        <div class="col-8">
-            <ul class="nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Active</a>
+    </nav>
+    <div class="row container-fluid bg-light">
+        <div class="col-lg-3">
+
+            <div class="row align-items-center">
+                <div class="col">
+                    <img src="./data/profile.jpeg" class="rounded-circle img-thumbnail" alt="profile">
+                </div>
+                <div class="col">
+                    <h2>Jae Hyuk Choi</h2>
+                </div>
+            </div>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <strong>Education</strong>
+                    <ul>
+                        <li>Ajou University, Suwon, Korea
+                            <ul>
+                                <li>B.S. in Military Digital Convergence (2015. 3. ~ 2019. 2.)</li>
+                                <li>M.S./Ph.D. in Military Digital Convergence (2021. 3. ~ )</li>
+
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li class="list-group-item">
+                    <strong>Work Experience</strong>
+                    <ul>
+                        <li>Republic of Korea Air Force Officer
+                            <ul>
+                                <li>Logistics Command(2019. 12. ~ 2021. 12.)</li>
+                                <li>Cyber Operation Center(2022. 1. ~ 2023. 7.)</li>
+                                <li>SEC lab(2023. 8. ~ )</li>
+                            </ul>
+                        </li>
+                    </ul>
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                <li class="list-group-item">
+                    <strong>Skills</strong>
+                    <i class="fas fa-c"></i>
+                    <i class="fab fa-java"></i>
+                    <i class="fab fa-python"></i>
+                    <i class="fab fa-js"></i>
                 </li>
-              </ul>
+                <li class="list-group-item">
+                    <strong>Contact me</strong>
+                    <a href="https://github.com/jhchoy00" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.instagram.com/jaehyukchoy/" target="_blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="mailto:jhchoy00@gmail.com"><i class="fas fa-envelope"></i></a>
+                </li>
+            </ul>
         </div>
+        <div class="col-lg-9" id="sub" data-include-html="./sub/home.html"></div>
     </div>
-    
 
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/7de04482d7.js" crossorigin="anonymous"></script>
 </body>
 
 </html>

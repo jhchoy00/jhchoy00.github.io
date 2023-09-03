@@ -1,0 +1,19 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    transition: ease-in-out 0.2s;
+}
+
+.card {
+    margin: 20px;
+    width: 18rem;
+}
+
+nav {
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+    
+}
+
+nav.scrolled {
+    background-color: var(--bs-gray-400);
+}
