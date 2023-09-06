@@ -19,11 +19,15 @@ function loadHtml() {
 }
 
 function loadMenu(obj) {
+    var profile = document.querySelector('#profile');
+    profile.dataset.includeHtml = '/profile.html';
+    var sub = document.querySelector('#sub');
+    sub.dataset.includeHtml = '/sub/' + String(obj.dataset.menu) + '.html';
+    var study = document.querySelector('#study');
+    deleteHtml(study);
+    loadHtml();
     var active = document.querySelector('.nav-item .active');
     active.classList.remove('active');
-    var sub = document.querySelector('#sub');
-    sub.dataset.includeHtml = './sub/' + String(obj.dataset.menu) + '.html';
-    loadHtml();
     obj.classList.add('active');
 }
 
@@ -32,7 +36,22 @@ function showMenu() {
     if (window.scrollY > 0) {
         nav.classList.add('scrolled');
     }
-    else if(window.scrollY == 0){
+    else if (window.scrollY == 0) {
         nav.classList.remove('scrolled');
     }
+}
+
+function loadStudy(thread){
+    var profile = document.querySelector('#profile');
+    var sub = document.querySelector('#sub');
+    deleteHtml(profile);
+    deleteHtml(sub);
+    var study = document.querySelector('#study');
+    study.dataset.includeHtml = '/sub/study/' + String(thread) + '.html';
+    loadHtml();
+}
+
+function deleteHtml(obj){
+    obj.dataset.includeHtml = '';
+    obj.innerHTML = '';
 }

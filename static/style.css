@@ -11,9 +11,31 @@
 nav {
     --bs-bg-opacity: 1;
     background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
-    
+
 }
 
 nav.scrolled {
     background-color: var(--bs-gray-400);
+}
+
+.list {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+}
+
+.list:hover {
+    cursor: pointer;
+    background-color: var(--bs-gray-400);
+}
+
+#study {
+    text-align: center;
+}
+
+@media screen and (max-width: 992px) {
+    #profile {
+        display: none;
+    }
 }
