@@ -1,5 +1,5 @@
 window.addEventListener('load', loadHtml);
-window.addEventListener('scroll', showMenu);
+window.addEventListener('scroll', scrollMenu);
 
 function loadHtml() {
     var allElements = document.getElementsByTagName('*');
@@ -29,15 +29,21 @@ function loadMenu(obj) {
     var active = document.querySelector('.nav-item .active');
     active.classList.remove('active');
     obj.classList.add('active');
+    var toggleLeft = document.querySelector(".toggle-left");
+    toggleLeft.classList.remove("toggled");
 }
 
-function showMenu() {
+function scrollMenu() {
     var nav = document.querySelector('nav');
+    var toggleLeft = document.querySelector(".toggle-left");
     if (window.scrollY > 0) {
         nav.classList.add('scrolled');
+        toggleLeft.classList.add('scrolled');
     }
     else if (window.scrollY == 0) {
         nav.classList.remove('scrolled');
+        toggleLeft.classList.remove('scrolled');
+
     }
 }
 
@@ -54,4 +60,9 @@ function loadStudy(thread){
 function deleteHtml(obj){
     obj.dataset.includeHtml = '';
     obj.innerHTML = '';
+}
+
+function navbarToggle(){
+    var toggleLeft = document.querySelector(".toggle-left");
+    toggleLeft.classList.toggle("toggled");
 }

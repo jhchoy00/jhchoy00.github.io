@@ -14,10 +14,6 @@ nav {
 
 }
 
-nav.scrolled {
-    background-color: var(--bs-gray-400);
-}
-
 .list {
     margin: 20px;
     padding: 20px;
@@ -34,8 +30,46 @@ nav.scrolled {
     text-align: center;
 }
 
+.img-thumbnail {
+    max-width: 100px;
+}
+
 @media screen and (max-width: 992px) {
-    #profile {
+    .navbar-toggler {
+        z-index: 2;
+    }
+
+    .toggle-left {
+        position: fixed;
+        top: 56px;
+        left: -100%;
+        transition: linear 0.2s;
+        --bs-bg-opacity: 1;
+        background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
+        max-width: 70%;
+        max-height: calc(100% - 56px);
+        overflow-y: auto;
+        overflow-x: hidden;
+
+    }
+
+    .toggled {
+        left: 0px
+    }
+
+    .no-show {
         display: none;
     }
+
+}
+
+@media screen and (min-width: 992px) {
+    nav.scrolled {
+        background-color: var(--bs-gray-400);
+    }
+
+    .reverse-no-show {
+        display: none;
+    }
+
 }
