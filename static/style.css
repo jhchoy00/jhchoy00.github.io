@@ -24,6 +24,11 @@ nav {
 .list:hover {
     cursor: pointer;
     background-color: var(--bs-gray-400);
+    margin: 14px;
+}
+
+.list:hover .list-item {
+    padding: 6px;
 }
 
 #study {
@@ -65,6 +70,9 @@ nav {
         display: none;
     }
 
+    .blur {
+        opacity: 0.4;
+    }
 }
 
 @media screen and (min-width: 992px) {

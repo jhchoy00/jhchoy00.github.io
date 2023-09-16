@@ -24,13 +24,16 @@ function loadMenu(obj) {
     var sub = document.querySelector('#sub');
     sub.dataset.includeHtml = '/sub/' + String(obj.dataset.menu) + '.html';
     var study = document.querySelector('#study');
-    deleteHtml(study);
+    //deleteHtml(study);
+    study.setAttribute('src','');
     loadHtml();
     var active = document.querySelector('.nav-item .active');
     active.classList.remove('active');
     obj.classList.add('active');
     var toggleLeft = document.querySelector(".toggle-left");
     toggleLeft.classList.remove("toggled");
+    var contents = document.querySelector("#contents");
+    contents.classList.remove("blur");
 }
 
 function scrollMenu() {
@@ -53,8 +56,9 @@ function loadStudy(thread){
     deleteHtml(profile);
     deleteHtml(sub);
     var study = document.querySelector('#study');
-    study.dataset.includeHtml = '/sub/study/' + String(thread) + '.html';
-    loadHtml();
+    study.setAttribute('src','/sub/study/' + String(thread) + '.html');
+    //study.dataset.includeHtml = '/sub/study/' + String(thread) + '.html';
+    //loadHtml();
 }
 
 function deleteHtml(obj){
@@ -65,4 +69,6 @@ function deleteHtml(obj){
 function navbarToggle(){
     var toggleLeft = document.querySelector(".toggle-left");
     toggleLeft.classList.toggle("toggled");
+    var contents = document.querySelector("#contents");
+    contents.classList.toggle("blur");
 }
