@@ -2,17 +2,14 @@
     font-family: 'Roboto', sans-serif;
     transition: ease-in-out 0.2s;
 }
-
+#nav{
+    position:sticky;
+}
 .card {
     margin: 20px;
     width: 18rem;
 }
 
-nav {
-    --bs-bg-opacity: 1;
-    background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
-
-}
 
 .list {
     margin: 20px;
@@ -37,10 +34,6 @@ nav {
 
 .img-thumbnail {
     max-width: 100px;
-}
-
-#contents {
-    margin: 0;
 }
 
 @media screen and (max-width: 992px) {
