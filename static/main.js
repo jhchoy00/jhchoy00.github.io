@@ -1,7 +1,7 @@
 $(() => {
     $("#nav").load("/sub/nav.html",()=>{
         var path=$(location).attr('pathname')
-        if(path=='/index.html'){
+        if(path=='/index.html' || path=='/'){
             $('nav a').eq(0).addClass('active');
         }
         if(path=='/projects.html'){
