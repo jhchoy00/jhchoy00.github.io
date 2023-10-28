@@ -10,37 +10,34 @@ $(() => {
         if(path=='/publications.html'){
             $('nav a').eq(2).addClass('active');
         }
-        if(path=='/study.html'){
+        if(path=='/study.html' || path.startsWith('/sub/study')){
             $('nav a').eq(3).addClass('active');
-            hashtagClassify();
+            if(path=='/study.html'){
+                makeHashtagList();
+            }
         }
     });
     $("#profile").load("/sub/profile.html");
 })
 
 $(window).scroll(() => {
-    var toggleLeft = $(".toggle-left");
     if (window.scrollY > 0) {
         $('nav').addClass('scrolled');
-        toggleLeft.classList.add('scrolled');
     }
     else if (window.scrollY == 0) {
         $('nav').removeClass('scrolled');
-        toggleLeft.classList.remove('scrolled');
     }
 });
 
-function navbarToggle() {
-    var toggleLeft = document.querySelector(".toggle-left");
-    toggleLeft.classList.toggle("toggled");
-    var contents = document.querySelector("#contents");
-    contents.classList.toggle("blur");
-}
-
-function hashtagClassify(){
+function makeHashtagList(){
     var hashtag=[]
     $('.hashtag').each(function(index,item){
         hashtag=hashtag.concat($(item).text().split(', '))
-        console.log(hashtag)
     });
+    
+    hashtagList=$('#hashtagList')
+    hashtag.forEach((ht)=>{
+        $('<a href=#>'+ht+'</a>').appendTo(hashtagList)
+    })
+
 }

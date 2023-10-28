@@ -23,39 +23,26 @@
 <script src="/static/main.js"></script>
 
 <body>
-    <div class="blur"></div>
     <nav id="nav" class="navbar navbar-expand-lg navbar-light sticky-top"></nav>
+    <hr>
     <div class="row flex container-fluid">
         <div class="col-lg-2">
-            <input type="text" placeholder="검색">
+            <input type="text" id="studySearch" placeholder="검색">
+            <div id="hashtagList"></div>
         </div>
         <div class="col-lg-10">
-            <div class="list" onclick="javascript:document.location.href='/sub/study/1.html'">
+            <div class="list" onclick="javascript:document.location.href='/sub/study/algorithm.html'">
                 <div class="list-item">
-                    <h2>CORS란 뭘까?</h2>
+                    <h2>Algorithm</h2>
                     <hr>
-                    <span class="hashtag">#CORS, #Cross-Origin-Resource-Sharing, #Flask, #React, #개발환경</span>
+                    <span class="hashtag">#Algorithm, #알고리즘, #test</span>
                 </div>
             </div>
-            <div class="list" onclick="javascript:document.location.href='/sub/study/2.html'">
+            <div class="list" onclick="javascript:study('')">
                 <div class="list-item">
-                    <h2>IDA Python 활용하기</h2>
+                    <h2>[논문리뷰] Fast, Accurate, and Lightweight Super-Resolution with Cascading Residual Network</h2>
                     <hr>
-                    <span class="hashtag">#보안, #IDA, #Python, #Reversing, #리버싱</span>
-                </div>
-            </div>
-            <div class="list" onclick="javascript:document.location.href='/sub/study/3.html'">
-                <div class="list-item">
-                    <h2>Javascript에서 Async와 Defer?</h2>
-                    <hr>
-                    <span class="hashtag">#Javascript, #Async, #Defer, #Front-end</span>
-                </div>
-            </div>
-            <div class="list" onclick="javascript:document.location.href='/sub/study/4.html'">
-                <div class="list-item">
-                    <h2>코테 공부하면서 정리한것</h2>
-                    <hr>
-                    <span class="hashtag">#코테</span>
+                    <span class="hashtag">#논문, #ComputerVision, #DeepLearning, #딥러닝, #SuperResolution, #test</span>
                 </div>
             </div>
         </div>

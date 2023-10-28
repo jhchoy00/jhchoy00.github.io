@@ -2,32 +2,34 @@
     font-family: 'Roboto', sans-serif;
     transition: ease-in-out 0.2s;
 }
-.carousel{
+
+.img-thumbnail {
+    max-width: 60%;
+    margin-bottom: 10px;
+}
+
+nav.scrolled {
+    background-color: #ecffe6;
+}
+
+.carousel {
     background-color: #eee;
 }
-.carousel-item{
-    text-align: center;
-}
+
 .carousel img {
     height: calc(100vh - 56px);
-    width:100%;
+    width: 100%;
     object-fit: contain;
-    object-position: center center;
 }
 
 .fasthand {
     font-family: 'Fasthand', cursive;
 }
 
-#nav {
-    position: sticky;
-}
-
 .card {
     margin: 20px;
     width: 18rem;
 }
-
 
 .list {
     margin: 20px;
@@ -38,7 +40,7 @@
 
 .list:hover {
     cursor: pointer;
-    background-color: var(--bs-gray-400);
+    background-color: #eee;
     margin: 14px;
 }
 
@@ -46,53 +48,10 @@
     padding: 6px;
 }
 
-#study {
-    text-align: center;
+#studySearch {
+    margin-top: 20px;
 }
 
-.img-thumbnail {
-    max-width: 100px;
-}
-
-@media screen and (max-width: 992px) {
-    .navbar-toggler {
-        z-index: 2;
-    }
-
-    .toggle-left {
-        position: fixed;
-        top: 56px;
-        left: -100%;
-        transition: linear 0.2s;
-        --bs-bg-opacity: 1;
-        background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity));
-        max-width: 70%;
-        max-height: calc(100% - 56px);
-        overflow-y: auto;
-        overflow-x: hidden;
-
-    }
-
-    .toggled {
-        left: 0px
-    }
-
-    .no-show {
-        display: none;
-    }
-
-    .blur {
-        opacity: 0.4;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    nav.scrolled {
-        background-color: var(--bs-gray-400);
-    }
-
-    .reverse-no-show {
-        display: none;
-    }
-
+#hashtagList a {
+    display: block;
 }
