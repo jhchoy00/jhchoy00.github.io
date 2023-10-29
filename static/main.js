@@ -35,13 +35,15 @@ function makeHashtagList(){
         hashtag=hashtag.concat($(item).text().split(', '))
     });
     
-    const result = hashtag.reduce((accu,curr) => {
+    const ht = hashtag.reduce((accu,curr) => {
         accu.set(curr,(accu.get(curr)||0)+1) ;
         return accu;
     },new Map());
     
+    const sort_ht=new Map([...ht].sort())
+
     hashtagList=$('#hashtagList')
-    for (let [key, value] of result.entries()) {
+    for (let [key, value] of sort_ht.entries()) {
         $('<a href=#>'+key+'('+value+')'+'</a>').appendTo(hashtagList)
     }
 }
