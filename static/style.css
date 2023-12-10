@@ -9,13 +9,12 @@
 }
 
 nav.scrolled {
-    background-color: #ecffe6;
-}
-
-.carousel {
     background-color: #eee;
 }
 
+.navbar-collapse{
+    justify-content: right;
+}
 .carousel img {
     height: calc(100vh - 56px);
     width: 100%;
@@ -53,14 +52,20 @@ nav.scrolled {
 }
 
 #hashtagList a {
-    color:black;
+    color: black;
     text-decoration: none;
     background-color: pink;
     border-radius: 20px;
-    padding:5px 10px;
+    padding: 5px 10px;
     margin: 5px 0;
 }
 
-#hashtagList a:hover{
+#hashtagList a:hover {
     background-color: hotpink;
+}
+
+@media screen and (max-width: 992px) {
+    #profile {
+        display: none;
+    }
 }
