@@ -92,7 +92,7 @@ function getAverageRGB(imgEl) {
 
 function makeHashtagList(){
     var hashtag=[]
-    $('.hashtag').each(function(index,item){
+    $('.hashtag').each((index,item)=>{
         hashtag=hashtag.concat($(item).text().split(', '))
     });
     
@@ -105,6 +105,17 @@ function makeHashtagList(){
 
     hashtagList=$('#hashtagList')
     for (let [key, value] of sort_ht.entries()) {
-        $('<a href=#>'+key+'('+value+')'+'</a>').appendTo(hashtagList)
+        $('<a href=javascript:findList("'+key+'")>'+key+'('+value+')'+'</a>').appendTo(hashtagList)
     }
+}
+
+function findList(hashtag){
+    $(".list").each((index,item)=>{
+        const ht=$(".hashtag",item).html();
+        if(ht.includes(hashtag)){
+            $(item).css("display","block")
+        }else{
+            $(item).css("display","none")
+        }
+    });
 }
